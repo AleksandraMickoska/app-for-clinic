@@ -10,10 +10,12 @@
 
     <title>Clinic</title>
   </head>
+
   <body>
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-info ">
-            <div class="container-fluid">
+        <!--Header-Navigation bar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-info shadow ">
+            <div class="container-fluid shadow">
               <a class="navbar-brand bg-primary text-light underline fw-bold border border-warning border-2 rounded-pill p-2" href="#">KidsClinic</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -55,13 +57,47 @@
                 </form>
               </div>
             </div>
-          </nav>
-          
-      </div>
-    
+        </nav> 
+        <!--Login part-->
+        <div class="row shadow">
+          <div class="col-lg-4 col-md-12 col-sm-12 text-center border border-success rounded rounded-3">
+              <img src="" class="">
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 text-center text-info border border-info rounded rounded-3">
+              <h3 class="m-3 shadow">You need our help?</h3>
+              <h3 class="mb-3">Book an appoinment</h3>
+              <form method="post" id="appointmentForm">
+                 <label for="fname"class="m-2" >First name:</label><br>
+                 <input type="text" id="fname" name="fname" class="rounded rounded-3 p-2" placeholder="Enter first name here" required><br>
+                 <label for="lname" class="m-2">Last name:</label><br>
+                 <input type="text" id="lname" name="lname" class="rounded rounded-3 p-2" placeholder="Enter last name here"required><br>                   
+                 <label for="description">Tell us the reason for appoinment</label><br>
+                 <textarea name="description" id="description" cols="30" rows="5" class="rounded rounded-3"></textarea><br>
+                 <label for="appt" class="m-2">Choose a time for your meeting</label>
+                 <input type="time" id="appt" name="appt" min="06:00" max="06:00" required class="rounded rounded-3"><br>
+                 <button type="submit" class=" shadow m-3 bg-info text-light border border-primary border-2 rounded-pill p-2">Send your request</button>
+               </form>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 text-center text-info  border border-warning rounded rounded-3">
+              <h3 class="m-3 shadow">You are our doctor?</h3>
+              <h3 class="mb-3">Login below</h3>
+              <form method="post" id="loginForm">
+                 <label for="fname"class="m-2" >Email address:</label><br>
+                 <input type="email" id="email" name="email" class="rounded rounded-3 p-2" placeholder="Enter email adress here" required><br>
+                 <label for="password" class="m-2">Password:</label><br>
+                 <input type="password" id="password" name="password" class="rounded rounded-3 p-2" placeholder="Enter password here" required><br>   
+                 <button type="submit" class="shadow mt-5 bg-info text-light border border-primary border-2 rounded-pill p-2">See your info</button>
+              </form>
+          </div>
+        </div>          
+      </div>      
+       
 
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+
+
+     <!-- Option 1: Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   </body>
 </html>
