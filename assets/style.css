@@ -1,0 +1,12 @@
+.welcome 
+{
+    background-image: url(welcome.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon
+{
+    height: 2em;
+    width: 2em;
+}
