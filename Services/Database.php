@@ -10,6 +10,8 @@ class Database implements IDatabase
 
     private $_checkDoctor="SELECT * FROM doctor WHERE Email_address=:email AND Password=:password";
 
+    private $_getPatients="SELECT * FROM patients WHERE doctor_id=:id";
+
     function __construct()
     {
         $this->initializeDatabase();
@@ -44,8 +46,14 @@ class Database implements IDatabase
         $stmt->bindValue('password', $password, PDO::PARAM_STR);
         $stmt->execute();
         return $stmt->fetch();
+    }
 
-
+    public function GetPatients($doctorsId)
+    {
+        $stmt=$this->pdo->prepare($this->_getPatients);
+        $stmt->bindValue('id',$doctorsId, PDO::PARAM_STR);
+        $stmt->execute([]);
+        return $stmt->fetchAll();
     }
 }
 
