@@ -12,7 +12,7 @@ class Database implements IDatabase
 
     private $_getPatients="SELECT * FROM patients WHERE doctor_id=:id";
 
-    function __construct()
+    public function __construct()
     {
         $this->initializeDatabase();
     }
